@@ -20,7 +20,7 @@ Welcome to the **Airtel 5G Unlimited Internet Kenya** landing page! This is a si
 
 ## 📂 How to View
 
-1. Download the `airtel_5g_landing.html` file.
+1. Download the `index.html` file.
 2. Double-click to open it in your favorite browser.
 3. Enjoy the airtel 5G speeds! 📡
 
