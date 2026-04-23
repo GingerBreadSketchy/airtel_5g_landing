@@ -488,7 +488,8 @@
             position: relative;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .plan-card::before {
@@ -642,6 +643,12 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            position: relative;
+            z-index: 10;
+            text-decoration: none;
+            -webkit-tap-highlight-color: rgba(230, 0, 0, 0.2);
+            touch-action: manipulation;
+            min-height: 48px;
         }
 
         .plan-btn-primary {
@@ -1038,6 +1045,11 @@
 
             .plan-card {
                 padding: 28px 24px;
+            }
+
+            .plan-btn {
+                min-height: 52px;
+                font-size: 1rem;
             }
 
             .fup-desc {
@@ -1457,11 +1469,11 @@
             lastScroll = currentScroll;
         });
 
-        // Button click feedback
-        document.querySelectorAll('button, .plan-btn, .btn-primary, .btn-secondary').forEach(btn => {
+        // Button click feedback (only for actual buttons, not links)
+        document.querySelectorAll('button:not(.mobile-menu-close):not(#navToggle)').forEach(btn => {
             btn.addEventListener('click', function(e) {
-                if (!this.closest('a') && !this.id) {
-                    // Show coming soon for non-linked buttons
+                // Show loading feedback for non-nav-cta buttons
+                if (!this.classList.contains('nav-cta')) {
                     const originalText = this.innerHTML;
                     this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
                     setTimeout(() => {
