@@ -163,9 +163,11 @@
             box-shadow: 0 4px 16px rgba(230, 0, 0, 0.3);
         }
 
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(230, 0, 0, 0.4);
+        @media (hover: hover) {
+            .nav-cta:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 24px rgba(230, 0, 0, 0.4);
+            }
         }
 
         .nav-toggle {
@@ -299,9 +301,11 @@
             text-decoration: none;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(230, 0, 0, 0.4);
+        @media (hover: hover) {
+            .btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 40px rgba(230, 0, 0, 0.4);
+            }
         }
 
         .btn-secondary {
@@ -320,9 +324,11 @@
             text-decoration: none;
         }
 
-        .btn-secondary:hover {
-            background: var(--red-soft);
-            border-color: var(--red-primary);
+        @media (hover: hover) {
+            .btn-secondary:hover {
+                background: var(--red-soft);
+                border-color: var(--red-primary);
+            }
         }
 
         /* Speed indicator */
@@ -497,11 +503,13 @@
             transition: opacity 0.3s ease;
         }
 
-        .plan-card:hover {
-            transform: translateY(-8px);
-            background: var(--gradient-card-hover);
-            border-color: var(--border-glow);
-            box-shadow: var(--shadow-red-lg);
+        @media (hover: hover) {
+            .plan-card:hover {
+                transform: translateY(-8px);
+                background: var(--gradient-card-hover);
+                border-color: var(--border-glow);
+                box-shadow: var(--shadow-red-lg);
+            }
         }
 
         .plan-card:hover::before {
@@ -642,9 +650,11 @@
             box-shadow: 0 4px 20px rgba(230, 0, 0, 0.25);
         }
 
-        .plan-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(230, 0, 0, 0.35);
+        @media (hover: hover) {
+            .plan-btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 28px rgba(230, 0, 0, 0.35);
+            }
         }
 
         .plan-btn-secondary {
